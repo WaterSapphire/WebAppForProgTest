@@ -1,0 +1,54 @@
+body {
+    background-color: #f6faff;
+    color: #6c7686;
+}
+
+h1 {
+    color: deepskyblue;
+}
+
+.link {
+    padding: 15px 0;
+}
+
+table th, table td {
+    border: solid 1px black;
+    padding: 10px 20px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table th {
+    background-color: antiquewhite;
+    color: red;
+}
+
+button {
+    padding: 5px 15px;
+    margin: 20px 0;
+}
+
+form input {
+    width: 30%;
+}
+
+form select, form button {
+    padding: 5px 15px;
+}
+
+form {
+    padding: 10px 20px;
+}
+
+form dl dt {
+    width: 100px;
+    padding: 10px 0;
+    float: left;
+    clear: both;
+}
+
+form dl dd {
+    padding: 10px 0;
+}

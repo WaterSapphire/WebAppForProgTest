@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>登録情報一覧</title>
+        <link rel="stylesheet" href="/css/style.css">
+
+        <script type="text/javascript"> 
+        function checkSubmit() {
+          if (window.confirm("登録されている情報を全て消去します。\nよろしいですか？")) {
+            return true;
+          } else {
+            return false;
+          }
+        }
+        </script>
+    </head>
+    <body>
+        <h1>登録情報一覧</h1>
+        <% if (data.length === 0) { %>
+          <p>登録されている情報はありません</p>
+        <% } else { %>
+          <main>
+            <table>
+              <tr>
+                <th>氏名</th>
+                <th>年齢</th>
+                <th>性別</th>
+                <th>電話番号</th>
+                <th>郵便番号</th>
+                <th>住所</th>
+              </tr>
+              <% data.forEach((value) => { %>
+                <tr>
+                  <td><%= value.Name %></td>
+                  <td><%= value.Age %></td>
+                  <td><%= value.Sex %></td>
+                  <td><%= value.PhoneNumber %></td>
+                  <td><%= value.PostalCode %></td>
+                  <td><%= value.StreetAddress %></td>
+                </tr>
+              <% }) %>
+            </table>
+          </main>
+          <form action="/index/delete" method="POST" onsubmit="return checkSubmit()">
+            <button type="submit">登録情報消去</button>
+          </form>
+        <% } %>
+        <p><a href="/form" class="link">登録フォーム画面へ</a></p>
+        <p><a href="/" class="link">トップ画面へ</a></p>
+    </body>
+</html>

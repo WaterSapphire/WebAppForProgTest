@@ -1,0 +1,20 @@
+{
+  "name": "web-app",
+  "version": "1.0.0",
+  "description": "Web Application for Uhuru Co. Programming test",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node app.js"
+  },
+  "author": "Hanashiro F.Kiyoshi",
+  "license": "MIT",
+  "dependencies": {
+    "csv": "^5.3.1",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "jest": "^25.1.0"
+  }
+}
